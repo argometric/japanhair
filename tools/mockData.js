@@ -71,7 +71,29 @@ const clients = [
   }
 ];
 
+const locations = [
+  {
+    id: 1,
+    name: "tokyo shop",
+    email: "tokyo@shop.com",
+    phone: "+1 (123) 456-7890"
+  },
+  {
+    id: 2,
+    name: "kyoto shop",
+    email: "kyoto@shop.com",
+    phone: "+1 (456) 789-1230"
+  },
+  {
+    id: 3,
+    name: "tokyo shop",
+    email: "osaka@shop.com",
+    phone: "+1 (789) 123-4560"
+  }
+];
+
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
 module.exports = {
-  clients
+  clients,
+  locations
 };
