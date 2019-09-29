@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import LocationsPage from "./LocationsPage";
 
 const HomePage = () => {
   return (
-    <div className="jumbotron">
-      <h1>Homepage</h1>
-      <p>Lorem ipsum</p>
-      <Link to="about" className="btn btn-primary">
-        About
-      </Link>
-    </div>
+    <>
+      <div className="jumbotron text-center">
+        <h1>Japan Hair</h1>
+      </div>
+      <LocationsPage />
+    </>
   );
 };
 
