@@ -12,10 +12,12 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "start": "run-p start:dev start:api",
+    "start": "run-p less start:dev start:api",
+    "prestart:dev": "npm run less",
     "start:dev": "cross-env REACT_APP_API_URL=http://localhost:3001 react-scripts start",
     "prestart:api": "node tools/createMockDb.js",
     "start:api": "node tools/apiServer.js",
+    "less": "cd public && lessc styles.less styles.css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
