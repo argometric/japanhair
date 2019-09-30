@@ -10,10 +10,12 @@ function ClientsPage() {
   }, []);
 
   return (
-    <>
-      <h2>Clients</h2>
+    <div className="container">
+      <div className="title text-center">
+        <h1>Clients</h1>
+      </div>
       <ClientsList clients={clients} />
-    </>
+    </div>
   );
 }
 

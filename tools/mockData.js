@@ -77,24 +77,27 @@ const locations = [
     name: "Tokyo shop",
     email: "tokyo@shop.com",
     phone: "+1 (123) 456-7890",
+    slots: 5,
     imgUrl:
-      "https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d1448522b66d3.01045017.jpeg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1569878049/tokyo_fccc7x.jpg"
   },
   {
     id: 2,
     name: "Kyoto shop",
     email: "kyoto@shop.com",
     phone: "+1 (456) 789-1230",
+    slots: 4,
     imgUrl:
-      "http://s3-us-west-2.amazonaws.com/static.trip-n-travel.com/wp-content/uploads/2016/05/19055310/23428057590_dc1b16b8e4_k.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1569878048/kyoto_xnheh8.jpg"
   },
   {
     id: 3,
     name: "Osaka shop",
     email: "osaka@shop.com",
     phone: "+1 (789) 123-4560",
+    slots: 3,
     imgUrl:
-      "https://external-preview.redd.it/sUSxT0BMIKQK8sx9HZEcgwATJUv-J0ZiwWPosq6HigY.jpg?auto=webp&s=058f24cb24642922b6cdbb027cb264f6e018f18a"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1569878049/osaka_n06mdm.jpg"
   }
 ];
 

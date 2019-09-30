@@ -10,15 +10,13 @@ function LocationsPage() {
   }, []);
 
   return (
-    <>
-      <div className="album py-5 bg-light">
-        <div className="container">
-          <div className="row">
-            <LocationsList locations={locations} />
-          </div>
+    <div className="album py-3 container">
+      <div className="container">
+        <div className="row">
+          <LocationsList locations={locations} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

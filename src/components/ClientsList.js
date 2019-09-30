@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ClientList = props => {
   return (
-    <table className="table">
+    <table className="table text-light">
       <thead>
         <tr>
           <th>ID</th>

@@ -1,0 +1,16 @@
+body {
+  background: #000;
+  color: #f9f9f9;
+}
+.card {
+  color: black;
+}
+.title {
+  padding: 4rem 0;
+}
+.nav-link {
+  color: #f9f9f9;
+}
+.nav-link:hover {
+  color: orange;
+}

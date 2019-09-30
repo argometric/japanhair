@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   const activeStyle = { color: "orange" };
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg bg-dark ">
       <button className="navbar-toggler" type="button" data-toggle="collapse">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -31,15 +31,6 @@ const Header = () => {
               to="/clients"
             >
               Clients
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              className="nav-link"
-              activeStyle={activeStyle}
-              to="/locations"
-            >
-              Locations
             </NavLink>
           </li>
           <li className="nav-item dropdown">
