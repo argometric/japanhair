@@ -2,8 +2,11 @@ body {
   background: #000;
   color: #f9f9f9;
 }
+button:focus {
+  outline: 0;
+}
 .card {
-  color: black;
+  color: #000;
 }
 .title {
   padding: 4rem 0;
@@ -14,10 +17,8 @@ body {
 .nav-link:hover {
   color: #e59400;
 }
-#orangeBtn:hover,
-#orangeBtn:focus {
+#orangeBtn:hover {
   color: #e59400;
-  box-shadow: none;
 }
 #orangeBtn:active {
   color: #cc8400;

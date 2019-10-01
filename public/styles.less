@@ -8,8 +8,12 @@ body {
   color: @font-color;
 }
 
+button:focus {
+  outline: 0;
+}
+
 .card {
-  color: black;
+  color: @background-color;
 }
 
 .title {
@@ -17,17 +21,15 @@ body {
 }
 
 .nav-link {
-  color: #f9f9f9;
+  color: @font-color;
 }
 
 .nav-link:hover {
   color: @orange-primary;
 }
 
-#orangeBtn:hover,
-#orangeBtn:focus {
+#orangeBtn:hover {
   color: @orange-primary;
-  box-shadow: none;
 }
 #orangeBtn:active {
   color: @orange-secondary;
