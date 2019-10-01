@@ -27,7 +27,7 @@ export default function LocationsList(props) {
         <div className="row">
           {props.locations.map(locations => {
             return (
-              <div className="col-md-4">
+              <div className="col-md-4" key={locations.id}>
                 <Card className="card mb-4 shadow-sm">
                   <CardActionArea>
                     <CardMedia

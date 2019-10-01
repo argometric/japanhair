@@ -5,6 +5,9 @@ body {
 button:focus {
   outline: 0;
 }
+a:hover {
+  text-decoration: none;
+}
 .card {
   color: #000;
 }
@@ -16,6 +19,15 @@ button:focus {
 }
 .nav-link:hover {
   color: #e59400;
+}
+.MuiTab-wrapper {
+  color: #f9f9f9;
+}
+.active > .MuiTab-wrapper {
+  color: #e59400;
+}
+.MuiTabs-flexContainer {
+  background-color: #2e2e2e;
 }
 #orangeBtn:hover {
   color: #e59400;

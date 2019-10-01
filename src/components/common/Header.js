@@ -1,47 +1,50 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
-  const activeStyle = { color: "orange" };
-  return (
-    <nav className="navbar navbar-expand-lg bg-dark ">
-      <button className="navbar-toggler" type="button" data-toggle="collapse">
-        <span className="navbar-toggler-icon"></span>
-      </button>
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 
-      <div
-        className="collapse navbar-collapse justify-content-md-center"
-        id="navbarsExample08"
-      >
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <NavLink
-              className="nav-link"
-              activeStyle={activeStyle}
-              exact
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              className="nav-link"
-              activeStyle={activeStyle}
-              to="/clients"
-            >
-              Clients
-            </NavLink>
-          </li>
-          <li className="nav-item dropdown">
-            <NavLink className="nav-link" activeStyle={activeStyle} to="/about">
-              About
-            </NavLink>
-          </li>
-        </ul>
-      </div>
-    </nav>
+const useStyles = makeStyles({
+  root: {
+    flexGrow: 1
+  }
+});
+
+export default function Header() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(
+    localStorage.getItem("tabState") || 0
   );
-};
 
-export default Header;
+  const handleChange = (event, newValue) => {
+    localStorage.setItem("tabState", newValue);
+    setValue(newValue);
+  };
+
+  return (
+    <Paper className={classes.root}>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        TabIndicatorProps={{
+          style: {
+            backgroundColor: "orange"
+          }
+        }}
+        centered
+      >
+        <Tab value="0" label="Home" component={NavLink} selected exact to="/" />
+        <Tab
+          value="1"
+          label="Clients"
+          component={NavLink}
+          selected
+          to="/clients"
+        />
+        <Tab value="2" label="About" component={NavLink} selected to="/about" />
+      </Tabs>
+    </Paper>
+  );
+}
