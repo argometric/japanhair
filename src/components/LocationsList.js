@@ -38,7 +38,7 @@ export default function LocationsList(props) {
                     <CardContent>
                       <Typography
                         gutterBottom
-                        variant="h3"
+                        variant="h4"
                         component="h2"
                         className="text-center"
                       >
@@ -47,8 +47,8 @@ export default function LocationsList(props) {
                     </CardContent>
                   </CardActionArea>
                   <div className="text-center">
-                    <h2>{locations.phone}</h2>
-                    <h2>{locations.email}</h2>
+                    <h4>{locations.phone}</h4>
+                    <h4>{locations.email}</h4>
                   </div>
                   <CardActions style={{ justifyContent: "center" }}>
                     <Button

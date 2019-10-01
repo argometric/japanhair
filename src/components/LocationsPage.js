@@ -10,7 +10,7 @@ function LocationsPage() {
   }, []);
 
   return (
-    <div className="album py-3 container">
+    <div className="album py-2 container">
       <div className="container">
         <div className="row">
           <LocationsList locations={locations} />
