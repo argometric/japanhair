@@ -12,5 +12,13 @@ body {
   color: #f9f9f9;
 }
 .nav-link:hover {
-  color: orange;
+  color: #e59400;
+}
+#orangeBtn:hover,
+#orangeBtn:focus {
+  color: #e59400;
+  box-shadow: none;
+}
+#orangeBtn:active {
+  color: #cc8400;
 }

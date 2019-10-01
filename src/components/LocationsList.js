@@ -23,7 +23,7 @@ const LocationsList = props => {
                         <h1>{locations.name}</h1>
                         <h2>{locations.phone}</h2>
                         <h2>{locations.email}</h2>
-                        <button className="btn btn-dark btn-lg">
+                        <button className="btn btn-dark btn-lg" id="orangeBtn">
                           Book Now
                         </button>
                       </div>
