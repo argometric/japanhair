@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { getClients } from "../api/clientApi";
-import ClientsList from "./ClientsList";
+import { getClients } from "../../api/clientApi";
+import ClientsList from "../others/ClientsList";
 
 function ClientsPage() {
   const [clients, setClients] = useState([]);

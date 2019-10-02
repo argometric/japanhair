@@ -74,35 +74,86 @@ const clients = [
 const locations = [
   {
     id: 1,
-    name: "Tokyo shop",
-    email: "tokyo@shop.com",
-    phone: "+1 (123) 456-7890",
+    name: "Tokyo",
+    map: "",
     slots: 5,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1569878049/tokyo_fccc7x.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
   },
   {
     id: 2,
-    name: "Kyoto shop",
-    email: "kyoto@shop.com",
-    phone: "+1 (456) 789-1230",
-    slots: 4,
+    name: "Kyoto",
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1569878048/kyoto_xnheh8.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/kyoto-small_dbwtkv.jpg"
   },
   {
     id: 3,
-    name: "Osaka shop",
-    email: "osaka@shop.com",
-    phone: "+1 (789) 123-4560",
+    name: "Osaka",
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/osaka-small_ogfea0.jpg"
+  }
+];
+
+const shops = [
+  {
+    id: 1,
+    name: "Tokyo shop1",
+    city: "Tokyo",
+    map: "",
+    slots: 5,
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+  },
+  {
+    id: 2,
+    name: "Tokyo shop2",
+    city: "Tokyo",
+    map: "",
     slots: 3,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1569878049/osaka_n06mdm.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+  },
+  {
+    id: 3,
+    name: "Tokyo shop3",
+    city: "Tokyo",
+    map: "",
+    slots: 4,
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+  },
+  {
+    id: 4,
+    name: "Kyoto shop1",
+    city: "Kyoto",
+    map: "",
+    slots: 5,
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+  },
+  {
+    id: 5,
+    name: "Kyoto shop2",
+    city: "Kyoto",
+    map: "",
+    slots: 2,
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/kyoto-small_dbwtkv.jpg"
+  },
+  {
+    id: 6,
+    name: "Osaka shop1",
+    city: "Osaka",
+    map: "",
+    slots: 3,
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/osaka-small_ogfea0.jpg"
   }
 ];
 
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
 module.exports = {
   clients,
-  locations
+  locations,
+  shops
 };

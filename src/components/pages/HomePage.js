@@ -1,6 +1,6 @@
 import React from "react";
 
-import LocationsPage from "./LocationsPage";
+import LocationsPage from "../others/LocationsPage";
 
 const HomePage = () => {
   return (
