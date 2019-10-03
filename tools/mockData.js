@@ -102,7 +102,7 @@ const shops = [
     map: "",
     slots: 5,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo5_vvp1hh.png"
   },
   {
     id: 2,
@@ -111,7 +111,7 @@ const shops = [
     map: "",
     slots: 3,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo6_mhevzy.png"
   },
   {
     id: 3,
@@ -120,7 +120,7 @@ const shops = [
     map: "",
     slots: 4,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo2_ubtx58.png"
   },
   {
     id: 4,
@@ -129,7 +129,7 @@ const shops = [
     map: "",
     slots: 5,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo3_fcqgic.png"
   },
   {
     id: 5,
@@ -138,7 +138,7 @@ const shops = [
     map: "",
     slots: 2,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/kyoto-small_dbwtkv.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo1_lshukl.png"
   },
   {
     id: 6,
@@ -147,7 +147,7 @@ const shops = [
     map: "",
     slots: 3,
     imgUrl:
-      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/osaka-small_ogfea0.jpg"
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo4_a1l643.png"
   }
 ];
 

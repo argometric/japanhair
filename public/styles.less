@@ -2,6 +2,7 @@
 @font-color: #f9f9f9;
 @orange-primary: #e59400;
 @orange-secondary: #cc8400;
+@nav-background: #2e2e2e;
 
 body {
   background: @background-color;
@@ -41,9 +42,19 @@ a:hover {
 }
 
 .MuiTabs-flexContainer {
-  background-color: #2e2e2e;
+  background-color: @nav-background;
 }
 
+.MuiDialogContent-root:first-child {
+  padding-top: 8px;
+}
+
+#popUp {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @nav-background;
+  box-shadow: 0px 0px 5px 5px @orange-secondary;
+}
 #orangeBtn:hover {
   color: @orange-primary;
 }
