@@ -1,7 +1,7 @@
 @background-color: #000;
 @font-color: #f9f9f9;
-@orange-primary: #e59400;
-@orange-secondary: #cc8400;
+@orange-primary: #ff9800;
+@orange-secondary: #fb8c00;
 @nav-background: #2e2e2e;
 
 body {
@@ -35,6 +35,15 @@ a:hover {
 
 .MuiTab-wrapper {
   color: @font-color;
+}
+
+.MuiFormLabel-root {
+  color: @orange-primary
+}
+
+.MuiInputBase-root {
+  color: @orange-secondary;
+  border-bottom: 2px solid @orange-primary;
 }
 
 .active > .MuiTab-wrapper {

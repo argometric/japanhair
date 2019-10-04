@@ -1,6 +1,6 @@
 import React from "react";
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
+import BookPage from "./pages/BookPage";
 import ClientsPage from "./pages/ClientsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Header from "./common/Header";
@@ -13,7 +13,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/clients" component={ClientsPage} />
-        <Route path="/about" component={AboutPage} />
+        <Route path="/book" component={BookPage} />
 
         <Route component={NotFoundPage} />
       </Switch>

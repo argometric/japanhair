@@ -18,13 +18,21 @@ a:hover {
   color: #f9f9f9;
 }
 .nav-link:hover {
-  color: #e59400;
+  color: #ff9800;
 }
 .MuiTab-wrapper {
   color: #f9f9f9;
 }
+.MuiFormLabel-root {
+  color: #ff9800;
+}
+.MuiInputBase-input {
+  color: #fb8c00;
+  border-bottom: 2px solid #ff9800;
+  cursor: pointer;
+}
 .active > .MuiTab-wrapper {
-  color: #e59400;
+  color: #ff9800;
 }
 .MuiTabs-flexContainer {
   background-color: #2e2e2e;
@@ -36,11 +44,11 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   background-color: #2e2e2e;
-  box-shadow: 0px 0px 5px 5px #cc8400;
+  box-shadow: 0px 0px 5px 5px #fb8c00;
 }
 #orangeBtn:hover {
-  color: #e59400;
+  color: #ff9800;
 }
 #orangeBtn:active {
-  color: #cc8400;
+  color: #fb8c00;
 }
