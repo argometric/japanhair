@@ -26,10 +26,9 @@ a:hover {
 .MuiFormLabel-root {
   color: #ff9800;
 }
-.MuiInputBase-input {
+#DatePicker {
   color: #fb8c00;
-  border-bottom: 2px solid #ff9800;
-  cursor: pointer;
+  border-bottom: 1px solid #ff9800;
 }
 .active > .MuiTab-wrapper {
   color: #ff9800;
@@ -51,4 +50,7 @@ a:hover {
 }
 #orangeBtn:active {
   color: #fb8c00;
+}
+#TimeTable input[type="text"]:disabled {
+  background-color: red;
 }

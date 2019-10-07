@@ -8,6 +8,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Dialog from "@material-ui/core/Dialog";
+import DatePickerClass from "../others/DatePickerClass";
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import MomentUtils from "@date-io/moment";
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -122,7 +125,11 @@ export default function LocationsList(props) {
                                     id="orangeBtn"
                                     size="large"
                                   >
-                                    Book now
+                                    <MuiPickersUtilsProvider
+                                      utils={MomentUtils}
+                                    >
+                                      <DatePickerClass />
+                                    </MuiPickersUtilsProvider>
                                   </Button>
                                 </CardActions>
                               </Card>

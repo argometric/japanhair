@@ -3,6 +3,7 @@
 @orange-primary: #ff9800;
 @orange-secondary: #fb8c00;
 @nav-background: #2e2e2e;
+@booked-color: red;
 
 body {
   background: @background-color;
@@ -38,12 +39,12 @@ a:hover {
 }
 
 .MuiFormLabel-root {
-  color: @orange-primary
+  color: @orange-primary;
 }
 
-.MuiInputBase-root {
+#DatePicker {
   color: @orange-secondary;
-  border-bottom: 2px solid @orange-primary;
+  border-bottom: 1px solid @orange-primary;
 }
 
 .active > .MuiTab-wrapper {
@@ -69,4 +70,8 @@ a:hover {
 }
 #orangeBtn:active {
   color: @orange-secondary;
+}
+
+#TimeTable input[type="text"]:disabled {
+  background-color: @booked-color;
 }

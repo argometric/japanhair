@@ -44,6 +44,7 @@ export default function Header() {
           to="/clients"
         />
         <Tab value="2" label="Book" component={NavLink} selected to="/book" />
+        <Tab value="3" label="Test" component={NavLink} selected to="/test" />
       </Tabs>
     </Paper>
   );

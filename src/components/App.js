@@ -5,6 +5,7 @@ import ClientsPage from "./pages/ClientsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Header from "./common/Header";
 import { Route, Switch } from "react-router-dom";
+import TestPage from "./pages/TestPage";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" exact component={HomePage} />
         <Route path="/clients" component={ClientsPage} />
         <Route path="/book" component={BookPage} />
+        <Route path="/test" component={TestPage} />
 
         <Route component={NotFoundPage} />
       </Switch>
