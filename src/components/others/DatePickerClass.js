@@ -22,7 +22,7 @@ const defaultMaterialTheme = createMuiTheme({
   }
 });
 
-function DatePickerClass(props) {
+function DatePickerClass() {
   const [selectedDate, handleDateChange] = useState(new Date());
 
   return (

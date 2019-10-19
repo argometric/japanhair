@@ -11,6 +11,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DatePickerClass from "../others/DatePickerClass";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import MomentUtils from "@date-io/moment";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -35,7 +36,9 @@ export default function LocationsList(props) {
   const handleClose = () => {
     setOpen(false);
   };
-
+  const handleTabChange = val => {
+    localStorage.setItem("tabState", val);
+  };
   return (
     <div className="container">
       <div className="album py-2">
@@ -130,6 +133,23 @@ export default function LocationsList(props) {
                                     >
                                       <DatePickerClass />
                                     </MuiPickersUtilsProvider>
+                                  </Button>
+                                  <Button
+                                    variant="contained"
+                                    className={classes.button}
+                                    id="orangeBtn"
+                                    size="large"
+                                    component={Link}
+                                    selected
+                                    to={{
+                                      pathname: "/test",
+                                      shopname: shops.name
+                                    }}
+                                    onClick={() => {
+                                      handleTabChange(3);
+                                    }}
+                                  >
+                                    Book
                                   </Button>
                                 </CardActions>
                               </Card>

@@ -1,24 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("08:00", 159, "", 24, 4.0),
-  createData("09:00", 159, "", 24, 4.0),
-  createData("10:00", 159, "", 24, 4.0),
-  createData("11:00", 159, "", 24, 4.0),
-  createData("12:00", 159, "", 24, 4.0),
-  createData("13:00", 159, "", 24, 4.0),
-  createData("14:00", 159, "", 24, 4.0),
-  createData("15:00", 159, "", 24, 4.0),
-  createData("16:00", 159, "", 24, 4.0),
-  createData("17:00", 159, "", 24, 4.0),
-  createData("18:00", 159, "", 24, 4.0),
-  createData("19:00", 159, "", 24, 4.0)
-];
+import { getShops } from "../../api/shopAPI";
+import { textAlign } from "@material-ui/system";
+import Tableslot from "./Tableslot";
+import TableSlot from "./Tableslot";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,41 +14,58 @@ const useStyles = makeStyles(theme => ({
   table: {
     width: "100%",
     border: "none",
-    borderCollapse: "collapse"
+    borderCollapse: "collapse",
+    textAlign: "center"
   }
 }));
 
-const CalendarPage = () => {
+const CalendarPage = props => {
+  const [shop, setShop] = useState(props.props.location.shopname);
+  const [shops, setShops] = useState([]);
+  let slots;
+  let openingTimes;
+  let closingTimes;
+  let service;
+
+  useEffect(() => {
+    getShops().then(_shops => setShops(_shops));
+  }, []);
+  shops.forEach(s => {
+    if (props.props.location.shopname === s.name) {
+      openingTimes = s.openingTimes / 100;
+      closingTimes = s.closingTimes / 100;
+      slots = s.slots;
+      service = s.service;
+    }
+  });
+
+  const amountOfHours = closingTimes - openingTimes;
+
+  const createData = (hour, slots) => {
+    return { hour, slots };
+  };
+
+  const rows = [];
+  for (let i = 0; i < amountOfHours; i++) {
+    rows.push(createData((openingTimes + i).toString() + ":00", slots));
+    rows.push(createData((openingTimes + i).toString() + ":30", slots));
+  }
+
   const classes = useStyles();
   return (
     <>
-      <table className={classes.table} stickyHeader>
+      <table className={classes.table}>
         <thead>
           <tr>
             <td>Hour</td>
-            <td align="center">Calories</td>
-            <td align="center">Fat&nbsp;(g)</td>
-            <td align="center">Carbs&nbsp;(g)</td>
-            <td align="center">Protein&nbsp;(g)</td>
+            <td align="center">Slots</td>
           </tr>
         </thead>
         <tbody id="TimeTable">
           {rows.map(row => (
-            <tr key={row.name}>
-              <th component="th">{row.name}</th>
-              <td align="center">
-                <input type="text" value={row.calories}></input>
-              </td>
-              <td align="center">
-                <input type="text" value={row.fat}></input>
-              </td>
-              <td align="center">
-                <input type="text" value={row.carbs}></input>
-              </td>
-              <td align="center">
-                {" "}
-                <input type="text" value={row.protein}></input>
-              </td>
+            <tr key={row.hour}>
+              <th component="th">{row.hour}</th>
+              <TableSlot align="center" value={row.slots} service={service} />
             </tr>
           ))}
         </tbody>

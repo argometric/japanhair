@@ -103,6 +103,11 @@ const shops = [
     slots: 5,
     openingTimes: 800,
     closingTimes: 1700,
+    service: {
+      cutting: false,
+      washing: true,
+      dying: true
+    },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo5_vvp1hh.png"
   },
@@ -114,6 +119,11 @@ const shops = [
     slots: 3,
     openingTimes: 1000,
     closingTimes: 1600,
+    service: {
+      cutting: true,
+      washing: true,
+      dying: true
+    },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo6_mhevzy.png"
   },
@@ -125,6 +135,11 @@ const shops = [
     slots: 4,
     openingTimes: 900,
     closingTimes: 1900,
+    service: {
+      cutting: false,
+      washing: true,
+      dying: false
+    },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo2_ubtx58.png"
   },
@@ -135,7 +150,12 @@ const shops = [
     map: "",
     slots: 5,
     openingTimes: 800,
-    closingTimes: 1700,
+    closingTimes: 2200,
+    service: {
+      cutting: true,
+      washing: true,
+      dying: false
+    },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo3_fcqgic.png"
   },
@@ -145,8 +165,13 @@ const shops = [
     city: "Kyoto",
     map: "",
     slots: 2,
-    openingTimes: 800,
-    closingTimes: 1700,
+    openingTimes: 1100,
+    closingTimes: 2300,
+    service: {
+      cutting: false,
+      washing: true,
+      dying: false
+    },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo1_lshukl.png"
   },
@@ -156,8 +181,13 @@ const shops = [
     city: "Osaka",
     map: "",
     slots: 3,
-    openingTimes: 800,
-    closingTimes: 1700,
+    openingTimes: 1200,
+    closingTimes: 1500,
+    service: {
+      cutting: true,
+      washing: false,
+      dying: false
+    },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo4_a1l643.png"
   }

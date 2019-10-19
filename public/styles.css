@@ -51,15 +51,15 @@ a:hover {
 #orangeBtn:active {
   color: #fb8c00;
 }
-#TimeTable input[type="text"] {
+#TimeTable button {
   border: none;
   width: 100%;
 }
-#TimeTable input[type="text"]:hover {
+#TimeTable button:hover {
   background-color: green;
   cursor: pointer;
 }
-#TimeTable input[type="text"]:disabled {
+#TimeTable button:disabled {
   background-color: red;
   cursor: not-allowed;
 }
