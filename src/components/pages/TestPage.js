@@ -14,16 +14,25 @@ const TestPage = props => {
     setShop(s.target.value);
   };
 
+  const reset = () => {
+    setShop(undefined);
+  };
+
   let title = "Select shop";
   let page = "";
 
   if (shop !== undefined) {
     title = props.location.shopname;
-    page = <CalendarPage props={shop}></CalendarPage>;
+    page = (
+      <>
+        <CalendarPage props={shop}></CalendarPage>
+        <button onClick={reset}>Change Location</button>
+      </>
+    );
   } else {
     page = (
-      <select onChange={handleChange}>
-        <option disabled selected></option>
+      <select onChange={handleChange} defaultValue="">
+        <option value="" disabled></option>
         {shops.map(s => (
           <option key={s.name} value={s.name}>
             {s.name}
@@ -32,7 +41,6 @@ const TestPage = props => {
       </select>
     );
   }
-  console.log(shop);
   return (
     <div className="container">
       <h1>{title}</h1>

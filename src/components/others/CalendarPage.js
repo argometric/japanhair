@@ -18,7 +18,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const CalendarPage = props => {
-  console.log(props);
   const [shops, setShops] = useState([]);
   let slots;
   let openingTimes;
