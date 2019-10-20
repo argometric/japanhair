@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { getShops } from "../../api/shopAPI";
-import { textAlign } from "@material-ui/system";
-import Tableslot from "./Tableslot";
 import TableSlot from "./Tableslot";
 
 const useStyles = makeStyles(theme => ({
@@ -20,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const CalendarPage = props => {
-  const [shop, setShop] = useState(props.props.location.shopname);
+  console.log(props);
   const [shops, setShops] = useState([]);
   let slots;
   let openingTimes;
@@ -31,7 +29,7 @@ const CalendarPage = props => {
     getShops().then(_shops => setShops(_shops));
   }, []);
   shops.forEach(s => {
-    if (props.props.location.shopname === s.name) {
+    if (props.props === s.name) {
       openingTimes = s.openingTimes / 100;
       closingTimes = s.closingTimes / 100;
       slots = s.slots;
