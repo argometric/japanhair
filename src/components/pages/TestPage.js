@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import CalendarPage from "../others/CalendarPage";
 import { getShops } from "../../api/shopAPI";
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import Button from '@material-ui/core/Button';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
 
 const TestPage = props => {
   const [shop, setShop] = useState(props.location.shopname);
@@ -26,19 +31,22 @@ const TestPage = props => {
     page = (
       <>
         <CalendarPage props={shop}></CalendarPage>
-        <button onClick={reset}>Change Location</button>
+        <Button onClick={reset}>Change Location</Button>
       </>
     );
   } else {
     page = (
-      <select onChange={handleChange} defaultValue="">
-        <option value="" disabled></option>
+      <>
+        <FormControl><InputLabel htmlFor="age-simple">Select a shop</InputLabel>
+      <Select onChange={handleChange} value="" style={{width:"200px"}}>
+
         {shops.map(s => (
-          <option key={s.name} value={s.name}>
+          <MenuItem key={s.name} value={s.name}>
             {s.name}
-          </option>
+          </MenuItem>
         ))}
-      </select>
+      </Select></FormControl>
+      </>
     );
   }
   return (

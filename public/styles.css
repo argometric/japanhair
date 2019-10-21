@@ -1,5 +1,5 @@
 body {
-  background: #000;
+  background: #444;
   color: #f9f9f9;
 }
 button:focus {
@@ -7,38 +7,14 @@ button:focus {
 }
 a:hover {
   text-decoration: none;
+  color:inherit;
+  opacity: 1;
 }
-.card {
-  color: #000;
-}
+
 .title {
   padding: 2rem 0;
 }
-.nav-link {
-  color: #f9f9f9;
-}
-.nav-link:hover {
-  color: #ff9800;
-}
-.MuiTab-wrapper {
-  color: #f9f9f9;
-}
-.MuiFormLabel-root {
-  color: #ff9800;
-}
-#DatePicker {
-  color: #fb8c00;
-  border-bottom: 1px solid #ff9800;
-}
-.active > .MuiTab-wrapper {
-  color: #ff9800;
-}
-.MuiTabs-flexContainer {
-  background-color: #2e2e2e;
-}
-.MuiDialogContent-root:first-child {
-  padding-top: 8px;
-}
+
 #popUp {
   display: flex;
   flex-wrap: wrap;

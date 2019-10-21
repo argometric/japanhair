@@ -186,7 +186,7 @@ const shops = [
     service: {
       cutting: true,
       washing: false,
-      dying: false
+      "dyeing (60 min)": true
     },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo4_a1l643.png"
