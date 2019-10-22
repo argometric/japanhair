@@ -27,8 +27,21 @@ const defaultMaterialTheme = createMuiTheme({
     background: {
       paper: "#0d0d0d",
     },
+    action: {
+      hover: orange[500],
+      disabled: orange[100],
+      disabledBackground: cyan[50]
+    },
+    },
+    overrides: {
+      MuiMenuItem: {
+        gutters: {
+          '&:hover': {
+            color: "#000"
+        }
+      }
     }
-  }
+  }}
 );
 render(
   <Router>

@@ -7,14 +7,15 @@ button:focus {
 }
 a:hover {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
   opacity: 1;
 }
-
 .title {
   padding: 2rem 0;
 }
-
+.nav-link:hover {
+  color: #ff9800;
+}
 #popUp {
   display: flex;
   flex-wrap: wrap;
