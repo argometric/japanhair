@@ -5,7 +5,10 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import FormControl from "@material-ui/core/FormControl";
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
 import { makeStyles } from "@material-ui/core/styles";
+
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -15,6 +18,9 @@ const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120
+  },
+  popup: {
+    backgroundColor: "#444"
   }
 }));
 
@@ -52,17 +58,17 @@ export default function FormDialog(props) {
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
-      >
+
+        ><div className={classes.popup}>
         <DialogTitle id="form-dialog-title">Book a timeslot</DialogTitle>
         <DialogContent>
           <form className={classes.container}>
             <FormControl className={classes.formControl}>
-              <select>
-                <option>None</option>
-                {services.map(service => (
-                  <option key={service}>{service}</option>
+              <Select value="">
+                  {services.map(service => (
+                  <MenuItem key={service}>{service}</MenuItem>
                 ))}
-              </select>
+              </Select>
             </FormControl>
           </form>
         </DialogContent>
@@ -74,6 +80,7 @@ export default function FormDialog(props) {
             Cancel
           </Button>
         </DialogActions>
+          </div>
       </Dialog>
     </>
   );

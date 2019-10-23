@@ -3,7 +3,6 @@ import { DatePicker } from "@material-ui/pickers";
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import orange from "@material-ui/core/colors/orange";
-import grey from "@material-ui/core/colors/grey";
 
 function DatePickerClass() {
   const [selectedDate, handleDateChange] = useState(new Date());
@@ -38,7 +37,6 @@ function DatePickerClass() {
     overrides: {
       MuiPickersCalendarHeader: {
         iconButton: {
-
            color: orange[500],
         },
       },
@@ -58,7 +56,6 @@ function DatePickerClass() {
         dayDisabled: {
           color: orange[100],
         },
-
       },
       MuiPickersModal: {
          dialogAction: {

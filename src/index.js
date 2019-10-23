@@ -38,10 +38,11 @@ const defaultMaterialTheme = createMuiTheme({
         gutters: {
           '&:hover': {
             color: "#000"
+          }
         }
-      }
+      },
     }
-  }}
+  }
 );
 render(
   <Router>

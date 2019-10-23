@@ -104,9 +104,9 @@ const shops = [
     openingTimes: 800,
     closingTimes: 1700,
     service: {
-      cutting: false,
-      washing: true,
-      dying: true
+      "cutting (30 min)": false,
+      "washing and cutting (45min)": true,
+      "hair dyeing (60 min)": true
     },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo5_vvp1hh.png"
@@ -120,9 +120,9 @@ const shops = [
     openingTimes: 1000,
     closingTimes: 1600,
     service: {
-      cutting: true,
-      washing: true,
-      dying: true
+      "cutting (30 min)": true,
+      "washing and cutting (45min)": true,
+      "hair dyeing (60 min)": true
     },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo6_mhevzy.png"
@@ -136,9 +136,9 @@ const shops = [
     openingTimes: 900,
     closingTimes: 1900,
     service: {
-      cutting: false,
-      washing: true,
-      dying: false
+      "cutting (30 min)": false,
+      "washing and cutting (45min)": true,
+      "hair dyeing (60 min)": false
     },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo2_ubtx58.png"
@@ -152,9 +152,9 @@ const shops = [
     openingTimes: 800,
     closingTimes: 2200,
     service: {
-      cutting: true,
-      washing: true,
-      dying: false
+      "cutting (30 min)": true,
+      "washing and cutting (45min)": true,
+      "hair dyeing (60 min)": false
     },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo3_fcqgic.png"
@@ -168,9 +168,9 @@ const shops = [
     openingTimes: 1100,
     closingTimes: 2300,
     service: {
-      cutting: false,
-      washing: true,
-      dying: false
+      "cutting (30 min)": false,
+      "washing and cutting (45min)": true,
+      "hair dyeing (60 min)": false
     },
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo1_lshukl.png"
@@ -184,8 +184,8 @@ const shops = [
     openingTimes: 1200,
     closingTimes: 1500,
     service: {
-      cutting: true,
-      washing: false,
+      "cutting (30 min)": true,
+      "washing and cutting (45min)": false,
       "dyeing (60 min)": true
     },
     imgUrl:
