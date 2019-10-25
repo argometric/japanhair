@@ -31,15 +31,8 @@ function ShopForm(props) {
   const [state, setState] = useState({});
 
   useEffect(() => {
-    setState(props.shop.services);
-  });
-
-  const handleService = s => event => {
-    setState({ ...state, [s]: event.target.checked });
-    console.log(event.target.value);
-    console.log("-------------");
-    // props.onChange();
-  };
+    setState(props.shop.service);
+  }, [props.shop.service]);
 
   const { a, b, c } = state;
 
@@ -114,7 +107,7 @@ function ShopForm(props) {
                 control={
                   <Checkbox
                     checked={a}
-                    onChange={props.onChange}
+                    onChange={props.onService}
                     value="cutting (30 min)"
                   />
                 }
@@ -125,7 +118,7 @@ function ShopForm(props) {
                 control={
                   <Checkbox
                     checked={b}
-                    onChange={props.onChange}
+                    onChange={props.onService}
                     value="cutting and washing (45 min)"
                   />
                 }
@@ -135,7 +128,7 @@ function ShopForm(props) {
                 control={
                   <Checkbox
                     checked={c}
-                    onChange={props.onChange}
+                    onChange={props.onService}
                     value="hair dyeing (60min)"
                   />
                 }

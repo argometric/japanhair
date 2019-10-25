@@ -24,7 +24,7 @@ function AddLocation() {
     slots: "",
     openingTimes: "",
     closingTimes: "",
-    services: {
+    service: {
       "cutting (30 min)": false,
       "cutting and washing (45 min)": false,
       "hair dyeing (60min)": false
@@ -36,6 +36,15 @@ function AddLocation() {
     console.log(target.value);
     const updatedShop = { ...shop, [target.name]: target.value };
     setShop(updatedShop);
+  };
+
+  const handleService = ({ target }) => {
+    for (const key in shop.service) {
+      if (key === target.value) {
+        shop.service[key] = !shop.service[key];
+      }
+    }
+    console.log(shop.service);
   };
 
   const handleSubmit = event => {
@@ -50,6 +59,7 @@ function AddLocation() {
       <ShopForm
         shop={shop}
         onChange={handleChange}
+        onService={handleService}
         onSubmit={handleSubmit}
         id="orangeBtn"
       ></ShopForm>

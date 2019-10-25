@@ -182,36 +182,19 @@
       "imgUrl": "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo4_a1l643.png"
     },
     {
-      "id": "8",
-      "name": "Argometric",
+      "id": "7",
+      "name": "WOOOR",
       "city": "Mattersburg",
-      "slots": "7",
+      "slots": "8",
       "openingTimes": "2000",
       "closingTimes": "2300",
-      "services": {
+      "service": {
         "cutting (30 min)": true,
         "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
+        "hair dyeing (60min)": true
       },
       "imgUrl": "",
-      "": "cutting and washing (45 min)",
-      "createdAt": 1572039437814
-    },
-    {
-      "id": "10",
-      "name": "Meetings",
-      "city": "Yolo",
-      "slots": "7",
-      "openingTimes": "0800",
-      "closingTimes": "2200",
-      "services": {
-        "cutting (30 min)": false,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "",
-      "": "hair dyeing (60min)",
-      "createdAt": 1572039575306
+      "createdAt": 1572041495456
     }
   ]
 }
