@@ -142,7 +142,7 @@ export default function LocationsList(props) {
                                     component={Link}
                                     selected
                                     to={{
-                                      pathname: "/test",
+                                      pathname: "/book",
                                       shopname: shops.name
                                     }}
                                     onClick={() => {

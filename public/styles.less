@@ -6,52 +6,59 @@
 @booked-color: red;
 
 body {
-  background: @background-color;
-  color: @font-color;
+    background: @background-color;
+    color: @font-color;
 }
 
 button:focus {
-  outline: 0;
+    outline: 0;
 }
 
 a:hover {
-  text-decoration: none;
-  color:inherit;
-  opacity: 1;
+    text-decoration: none;
+    color: inherit;
+    opacity: 1;
 }
 
 .title {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 .nav-link:hover {
-  color: @orange-primary;
+    color: @orange-primary;
 }
 
 #popUp {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: @nav-background;
-  box-shadow: 0px 0px 5px 5px @orange-secondary;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: @nav-background;
+    box-shadow: 0px 0px 5px 5px @orange-secondary;
 }
 #orangeBtn:hover {
-  color: @orange-primary;
+    color: @orange-primary;
 }
 #orangeBtn:active {
-  color: @orange-secondary;
+    color: @orange-secondary;
 }
 
 #TimeTable button {
-  border: none;
-  width: 100%;
+    border: none;
+    width: 100%;
 }
 
 #TimeTable button:hover {
-  background-color: green;
-  cursor: pointer;
+    background-color: green;
+    cursor: pointer;
 }
 
 #TimeTable button:disabled {
-  background-color: @booked-color;
-  cursor: not-allowed;
+    background-color: @booked-color;
+    cursor: not-allowed;
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: @nav-background;
+}
+.MuiMenuItem-gutters:hover .MuiCheckbox-colorSecondary {
+    color: @nav-background;
 }
