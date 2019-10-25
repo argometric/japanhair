@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import ShopForm from "../others/ShopForm";
 import { saveShop } from "../../api/shopAPI";
 import { getShops } from "../../api/shopAPI";
 
 function AddLocation() {
+  let _id = 0;
+
   const [shops, setShops] = useState([]);
 
   useEffect(() => {
     getShops().then(_shops => setShops(_shops));
   }, []);
 
-  let _id = 0;
-  shops.forEach(s => {
-    if (_id <= s.id) {
-      _id = Number(s.id) + 1;
-    }
-  });
+  console.log(_id);
 
   const [shop, setShop] = useState({
     id: _id,
@@ -54,16 +51,27 @@ function AddLocation() {
     getShops().then(_shops => setShops(_shops));
   };
 
+  const getData = () => {
+    shops.forEach(s => {
+      if (_id <= s.id) {
+        shop.id = Number(s.id) + 1;
+      }
+    });
+  };
+
   return (
-    <div className="container">
-      <ShopForm
-        shop={shop}
-        onChange={handleChange}
-        onService={handleService}
-        onSubmit={handleSubmit}
-        id="orangeBtn"
-      ></ShopForm>
-    </div>
+    getData(),
+    (
+      <div className="container">
+        <ShopForm
+          shop={shop}
+          onChange={handleChange}
+          onService={handleService}
+          onSubmit={handleSubmit}
+          id="orangeBtn"
+        ></ShopForm>
+      </div>
+    )
   );
 }
 

@@ -195,6 +195,21 @@
       },
       "imgUrl": "",
       "createdAt": 1572041495456
+    },
+    {
+      "id": 8,
+      "name": "asassa",
+      "city": "asassa",
+      "slots": "5",
+      "openingTimes": "2200",
+      "closingTimes": "2300",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "",
+      "createdAt": 1572043100002
     }
   ]
 }
