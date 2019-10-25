@@ -183,14 +183,35 @@
     },
     {
       "id": "8",
-      "name": "Yokohama shop 1",
-      "city": "Wars",
+      "name": "Argometric",
+      "city": "Mattersburg",
+      "slots": "7",
+      "openingTimes": "2000",
+      "closingTimes": "2300",
+      "services": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "",
+      "": "cutting and washing (45 min)",
+      "createdAt": 1572039437814
+    },
+    {
+      "id": "10",
+      "name": "Meetings",
+      "city": "Yolo",
       "slots": "7",
       "openingTimes": "0800",
-      "closingTimes": "2100",
-      "services": [],
-      "imgUrl": "a",
-      "createdAt": 1572016516703
+      "closingTimes": "2200",
+      "services": {
+        "cutting (30 min)": false,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "",
+      "": "hair dyeing (60min)",
+      "createdAt": 1572039575306
     }
   ]
 }

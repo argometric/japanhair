@@ -40,9 +40,3 @@ a:hover {
   background-color: red;
   cursor: not-allowed;
 }
-.MuiCheckbox-colorSecondary.Mui-checked {
-  color: #2e2e2e;
-}
-.MuiMenuItem-gutters:hover .MuiCheckbox-colorSecondary {
-  color: #2e2e2e;
-}

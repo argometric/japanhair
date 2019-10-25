@@ -36,9 +36,10 @@ export default function LocationsList(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  const handleTabChange = val => {
-    localStorage.setItem("tabState", val);
-  };
+  // const handleTabChange = val => {
+  //   localStorage.setItem("tabState", val);
+  // };
+
   return (
     <div className="container">
       <div className="album py-2">
@@ -72,7 +73,6 @@ export default function LocationsList(props) {
 
                   <CardActions style={{ justifyContent: "center" }}>
                     <Button
-
                       className={classes.button}
                       id="orangeBtn"
                       size="large"
@@ -98,7 +98,13 @@ export default function LocationsList(props) {
                                 id="dialogCard"
                                 key={shops.id}
                               >
-                                <CardActionArea>
+                                <CardActionArea
+                                  component={Link}
+                                  to={{
+                                    pathname: "/book",
+                                    shopname: shops.name
+                                  }}
+                                >
                                   <CardMedia
                                     image={shops.imgUrl}
                                     style={{
@@ -143,9 +149,9 @@ export default function LocationsList(props) {
                                       pathname: "/book",
                                       shopname: shops.name
                                     }}
-                                    onClick={() => {
-                                      handleTabChange(3);
-                                    }}
+                                    // onClick={() => {
+                                    //   handleTabChange(3);
+                                    // }}
                                   >
                                     Book
                                   </Button>
