@@ -4,11 +4,8 @@ import { render } from 'react-dom';
 import App from './components/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import orange from '@material-ui/core/colors/orange';
-import cyan from '@material-ui/core/colors/cyan';
 import { createMuiTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-
-// https://material-ui.com/customization/default-theme/
 
 const defaultMaterialTheme = createMuiTheme({
     palette: {

@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
     backgroundColor: "#2E2E2E",
-    color: "white",
+
     "&:hover": {
       backgroundColor: "#212121"
     }
@@ -72,7 +72,7 @@ export default function LocationsList(props) {
 
                   <CardActions style={{ justifyContent: "center" }}>
                     <Button
-                      variant="contained"
+
                       className={classes.button}
                       id="orangeBtn"
                       size="large"
@@ -123,7 +123,6 @@ export default function LocationsList(props) {
                                   style={{ justifyContent: "center" }}
                                 >
                                   <Button
-                                    variant="contained"
                                     className={classes.button}
                                     id="orangeBtn"
                                     size="large"
@@ -135,7 +134,6 @@ export default function LocationsList(props) {
                                     </MuiPickersUtilsProvider>
                                   </Button>
                                   <Button
-                                    variant="contained"
                                     className={classes.button}
                                     id="orangeBtn"
                                     size="large"

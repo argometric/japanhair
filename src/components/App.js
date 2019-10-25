@@ -1,11 +1,11 @@
 import React from 'react';
 import HomePage from './pages/HomePage';
-import BookPage from './pages/BookPage';
-import AddLocation from './pages/AddLocation';
+import TestPage from './pages/TestPage';
+import AddShop from './pages/AddShop';
 import NotFoundPage from './pages/NotFoundPage';
 import Header from './common/Header';
 import { Route, Switch } from 'react-router-dom';
-import TestPage from './pages/TestPage';
+import BookPage from './pages/BookPage';
 
 const App = () => {
     return (
@@ -13,9 +13,9 @@ const App = () => {
             <Header />
             <Switch>
                 <Route path='/' exact component={HomePage} />
-                <Route path='/clients' component={AddLocation} />
-                <Route path='/book' component={BookPage} />
+                <Route path='/shops' component={AddShop} />
                 <Route path='/test' component={TestPage} />
+                <Route path='/book' component={BookPage} />
 
                 <Route component={NotFoundPage} />
             </Switch>
