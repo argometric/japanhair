@@ -182,34 +182,139 @@
       "imgUrl": "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570131663/logo4_a1l643.png"
     },
     {
-      "id": "7",
-      "name": "WOOOR",
-      "city": "Mattersburg",
-      "slots": "8",
-      "openingTimes": "2000",
-      "closingTimes": "2300",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": true
-      },
-      "imgUrl": "",
-      "createdAt": 1572041495456
-    },
-    {
-      "id": 8,
-      "name": "asassa",
-      "city": "asassa",
-      "slots": "5",
-      "openingTimes": "2200",
-      "closingTimes": "2300",
+      "id": 7,
+      "name": "Yokohama shop 1",
+      "city": "Tokyo",
+      "slots": "2",
+      "openingTimes": "0300",
+      "closingTimes": "1500",
       "service": {
         "cutting (30 min)": true,
         "cutting and washing (45 min)": false,
         "hair dyeing (60min)": false
       },
-      "imgUrl": "",
-      "createdAt": 1572043100002
+      "imgUrl": "test",
+      "createdAt": 1572376913057
+    },
+    {
+      "id": 8,
+      "name": "Test",
+      "city": "Tokyo",
+      "slots": "12",
+      "openingTimes": "0500",
+      "closingTimes": "1000",
+      "service": {
+        "cutting (30 min)": false,
+        "cutting and washing (45 min)": true,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572377386431
+    },
+    {
+      "id": 9,
+      "name": "Yokohama shop 2",
+      "city": "Tokyo",
+      "slots": "8",
+      "openingTimes": "0200",
+      "closingTimes": "0800",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572377707744
+    },
+    {
+      "id": 10,
+      "name": "asdasd",
+      "city": "Tokyo",
+      "slots": "4",
+      "openingTimes": "0800",
+      "closingTimes": "2299",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572377855938
+    },
+    {
+      "id": 11,
+      "name": "Yokohama shop 3",
+      "city": "Tokyo",
+      "slots": "7",
+      "openingTimes": "0800",
+      "closingTimes": "2222",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572378103501
+    },
+    {
+      "id": 12,
+      "name": "Yokohama shop 5",
+      "city": "Tokyo",
+      "slots": "7",
+      "openingTimes": "0800",
+      "closingTimes": "1500",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572378256448
+    },
+    {
+      "id": 13,
+      "name": "Yokohama shop 7",
+      "city": "Tokyo",
+      "slots": "7",
+      "openingTimes": "0930",
+      "closingTimes": "1000",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572378579457
+    },
+    {
+      "id": 14,
+      "name": "Woot",
+      "city": "Tokyo",
+      "slots": "2",
+      "openingTimes": "0930",
+      "closingTimes": "1500",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572378966174
+    },
+    {
+      "id": 15,
+      "name": "Woooooot",
+      "city": "Tokyo",
+      "slots": "1",
+      "openingTimes": "0900",
+      "closingTimes": "1100",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572379230138
     }
   ]
 }

@@ -16,7 +16,6 @@ const App = () => {
                 <Route path='/shops' component={AddShop} />
                 <Route path='/test' component={TestPage} />
                 <Route path='/book' component={BookPage} />
-
                 <Route component={NotFoundPage} />
             </Switch>
         </div>
