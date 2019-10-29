@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
 function ShopForm(props) {
   const classes = useStyles();
   const [state, setState] = useState({});
+  
 
   useEffect(() => {
     setState(props.shop.service);
@@ -41,7 +42,7 @@ function ShopForm(props) {
       <form onSubmit={props.onSubmit}>
         <div className="row text-center">
           <div className="col">
-            <FormControl className={classes.formControl} >
+            <FormControl className={classes.formControl}>
               <TextField
                 label="Name"
                 value={props.shop.name}
@@ -52,7 +53,7 @@ function ShopForm(props) {
               />
             </FormControl>
             <br />
-            <FormControl className={classes.formControl} >
+            <FormControl className={classes.formControl}>
               <TextField
                 label="City"
                 value={props.shop.city}
@@ -70,7 +71,9 @@ function ShopForm(props) {
                 name="openingTimes"
                 onChange={props.onChange}
                 helperText={props.errors.openingTimes}
-                error={props.errors.openingTimes === "Opening-times are required"}
+                error={
+                  props.errors.openingTimes === "Opening-times are required"
+                }
               />
             </FormControl>
             <br />
@@ -81,12 +84,14 @@ function ShopForm(props) {
                 name="closingTimes"
                 onChange={props.onChange}
                 helperText={props.errors.closingTimes}
-                error={props.errors.closingTimes === "Closing-times are required"}
+                error={
+                  props.errors.closingTimes === "Closing-times are required"
+                }
               />
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>
-            <TextField
+              <TextField
                 label="Slots"
                 value={props.shop.slots}
                 name="slots"
@@ -98,47 +103,51 @@ function ShopForm(props) {
 
             <br />
             <FormControl className={classes.formControl}>
-              <TextField label="Services"
+              <TextField
+                label="Services"
                 disabled
                 name="slots"
                 onChange={props.onChange}
                 helperText={props.errors.service}
-                error={props.errors.service === "At least one service must be selected"}
-                />
+                error={
+                  props.errors.service ===
+                  "At least one service must be selected"
+                }
+              />
               <FormGroup className="ml-3">
-              <FormControlLabel
-                className="mb-0"
-                control={
-                  <Checkbox
-                    checked={a}
-                    onChange={props.onService}
-                    value="cutting (30 min)"
-                  />
-                }
-                label="cutting (30 min)"
-              />
-              <FormControlLabel
-                className="mb-0"
-                control={
-                  <Checkbox
-                    checked={b}
-                    onChange={props.onService}
-                    value="cutting and washing (45 min)"
-                  />
-                }
-                label="cutting and washing (45 min)"
-              />
-              <FormControlLabel
-                className="mb-0"
-                control={
-                  <Checkbox
-                    checked={c}
-                    onChange={props.onService}
-                    value="hair dyeing (60min)"
-                  />
-                }
-                label="hair dyeing (60min)"
-              />
+                <FormControlLabel
+                  className="mb-0"
+                  control={
+                    <Checkbox
+                      checked={a}
+                      onChange={props.onService}
+                      value="cutting (30 min)"
+                    />
+                  }
+                  label="cutting (30 min)"
+                />
+                <FormControlLabel
+                  className="mb-0"
+                  control={
+                    <Checkbox
+                      checked={b}
+                      onChange={props.onService}
+                      value="cutting and washing (45 min)"
+                    />
+                  }
+                  label="cutting and washing (45 min)"
+                />
+                <FormControlLabel
+                  className="mb-0"
+                  control={
+                    <Checkbox
+                      checked={c}
+                      onChange={props.onService}
+                      value="hair dyeing (60min)"
+                    />
+                  }
+                  label="hair dyeing (60min)"
+                />
               </FormGroup>
             </FormControl>
             <br />

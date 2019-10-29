@@ -183,130 +183,55 @@
     },
     {
       "id": 7,
-      "name": "Yokohama shop 1",
+      "name": "Test",
       "city": "Tokyo",
-      "slots": "2",
-      "openingTimes": "0300",
-      "closingTimes": "1500",
+      "slots": "8",
+      "openingTimes": "0800",
+      "closingTimes": "2000",
       "service": {
         "cutting (30 min)": true,
         "cutting and washing (45 min)": false,
         "hair dyeing (60min)": false
       },
-      "imgUrl": "test",
-      "createdAt": 1572376913057
+      "imgUrl": "a",
+      "createdAt": 1572387143585
     },
     {
       "id": 8,
-      "name": "Test",
+      "name": "Woot",
       "city": "Tokyo",
-      "slots": "12",
-      "openingTimes": "0500",
-      "closingTimes": "1000",
+      "slots": "8",
+      "openingTimes": "0800",
+      "closingTimes": "2000",
       "service": {
-        "cutting (30 min)": false,
-        "cutting and washing (45 min)": true,
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
         "hair dyeing (60min)": false
       },
       "imgUrl": "a",
-      "createdAt": 1572377386431
+      "createdAt": 1572387185665
     },
     {
       "id": 9,
-      "name": "Yokohama shop 2",
+      "name": "Woot",
       "city": "Tokyo",
       "slots": "8",
-      "openingTimes": "0200",
-      "closingTimes": "0800",
+      "openingTimes": "0800",
+      "closingTimes": "2000",
       "service": {
         "cutting (30 min)": true,
         "cutting and washing (45 min)": false,
         "hair dyeing (60min)": false
       },
       "imgUrl": "a",
-      "createdAt": 1572377707744
+      "createdAt": 1572387245405
     },
     {
       "id": 10,
-      "name": "asdasd",
+      "name": "Wooter",
       "city": "Tokyo",
-      "slots": "4",
-      "openingTimes": "0800",
-      "closingTimes": "2299",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "a",
-      "createdAt": 1572377855938
-    },
-    {
-      "id": 11,
-      "name": "Yokohama shop 3",
-      "city": "Tokyo",
-      "slots": "7",
-      "openingTimes": "0800",
-      "closingTimes": "2222",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "a",
-      "createdAt": 1572378103501
-    },
-    {
-      "id": 12,
-      "name": "Yokohama shop 5",
-      "city": "Tokyo",
-      "slots": "7",
-      "openingTimes": "0800",
-      "closingTimes": "1500",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "a",
-      "createdAt": 1572378256448
-    },
-    {
-      "id": 13,
-      "name": "Yokohama shop 7",
-      "city": "Tokyo",
-      "slots": "7",
-      "openingTimes": "0930",
-      "closingTimes": "1000",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "a",
-      "createdAt": 1572378579457
-    },
-    {
-      "id": 14,
-      "name": "Woot",
-      "city": "Tokyo",
-      "slots": "2",
-      "openingTimes": "0930",
-      "closingTimes": "1500",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "a",
-      "createdAt": 1572378966174
-    },
-    {
-      "id": 15,
-      "name": "Woooooot",
-      "city": "Tokyo",
-      "slots": "1",
-      "openingTimes": "0900",
+      "slots": "8",
+      "openingTimes": "0700",
       "closingTimes": "1100",
       "service": {
         "cutting (30 min)": true,
@@ -314,7 +239,22 @@
         "hair dyeing (60min)": false
       },
       "imgUrl": "a",
-      "createdAt": 1572379230138
+      "createdAt": 1572387600955
+    },
+    {
+      "id": 11,
+      "name": "Hello There",
+      "city": "Tokyo",
+      "slots": "8",
+      "openingTimes": "0800",
+      "closingTimes": "1700",
+      "service": {
+        "cutting (30 min)": true,
+        "cutting and washing (45 min)": false,
+        "hair dyeing (60min)": false
+      },
+      "imgUrl": "a",
+      "createdAt": 1572387653636
     }
   ]
 }

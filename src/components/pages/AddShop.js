@@ -3,7 +3,7 @@ import ShopForm from "../others/ShopForm";
 import { saveShop } from "../../api/shopAPI";
 import { getShops } from "../../api/shopAPI";
 
-function AddLocation() {
+function AddLocation(props) {
   let _id = 0;
 
   const [shops, setShops] = useState([]);
@@ -53,9 +53,10 @@ function AddLocation() {
 
     let checkedService = false;
     for (var prop in shop.service) {
-      if (shop.service[prop]) checkedService=true;
+      if (shop.service[prop]) checkedService = true;
     }
-    if (!checkedService) _errors.service = "At least one service must be selected";
+    if (!checkedService)
+      _errors.service = "At least one service must be selected";
 
     setErrors(_errors);
     return Object.keys(_errors).length === 0;
@@ -64,7 +65,9 @@ function AddLocation() {
   const handleSubmit = event => {
     event.preventDefault();
     if (!formIsValid()) return;
-    saveShop(shop);
+    saveShop(shop).then(() => {
+      props.history.push("/book");
+    });
   };
 
   const getData = () => {
