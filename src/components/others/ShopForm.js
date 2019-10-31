@@ -6,12 +6,16 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { TextField, FormGroup } from "@material-ui/core";
 import orange from "@material-ui/core/colors/orange";
-// import { Link } from "react-router-dom";
+import { DropzoneArea } from "material-ui-dropzone";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
     width: 300,
     color: orange[500]
+  },
+  dropzone: {
+    height: 200,
+    overflow: "hidden"
   },
   button: {
     backgroundColor: "#2E2E2E",
@@ -26,7 +30,17 @@ const useStyles = makeStyles(theme => ({
 function ShopForm(props) {
   const classes = useStyles();
   const [state, setState] = useState({});
-  
+  const [image, setImage] = useState({});
+
+  const handleChange = target => {
+    console.log("********");
+    console.log(image);
+    console.log(target);
+    console.log("********");
+
+    // setImage(target);
+    // props.onImage(image);
+  };
 
   useEffect(() => {
     setState(props.shop.service);
@@ -151,7 +165,7 @@ function ShopForm(props) {
               </FormGroup>
             </FormControl>
             <br />
-            <FormControl className={classes.formControl}>
+            <FormControl className={`${classes.formControl} `}>
               <TextField
                 label="Logo"
                 value={props.shop.imgUrl}
@@ -159,6 +173,16 @@ function ShopForm(props) {
                 onChange={props.onChange}
                 helperText={props.errors.imgUrl}
                 error={props.errors.imgUrl === "Logo is required"}
+                className="mb-1"
+              />
+              <DropzoneArea
+                onChange={handleChange}
+                acceptedFiles={["image/jpeg", "image/png", "image/bmp"]}
+                filesLimit={1}
+                showAlerts={true}
+                showPreviews={true}
+                maxFileSize={5000000}
+                showFileNamesInPreview={false}
               />
             </FormControl>
             <br />
