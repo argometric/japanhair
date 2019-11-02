@@ -7,9 +7,9 @@ import Button from "@material-ui/core/Button";
 import { TextField, FormGroup } from "@material-ui/core";
 import orange from "@material-ui/core/colors/orange";
 import { DropzoneArea } from "material-ui-dropzone";
-import { getLocations, saveLocation } from "../../api/locationApi";
-import Select from "@material-ui/core/Select";
+import { getLocations } from "../../api/locationApi";
 import MenuItem from "@material-ui/core/MenuItem";
+import InputDialog from "../common/InputDialog";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -26,13 +26,6 @@ const useStyles = makeStyles(theme => ({
     marginTop: 35,
     "&:hover": {
       backgroundColor: "#212121"
-    }
-  },
-  overrides: {
-    MuiSelect: {
-      select: {
-        textAlign: "start"
-      }
     }
   }
 }));
@@ -51,6 +44,11 @@ function ShopForm(props) {
 
     // setImage(target);
     // props.onImage(image);
+  };
+
+  const handleNewLocation = () => {
+    console.log("test");
+    getLocations().then(_locations => setLocations(_locations));
   };
 
   useEffect(() => {
@@ -95,8 +93,14 @@ function ShopForm(props) {
                     {option.name}
                   </MenuItem>
                 ))}
-                <MenuItem value="Add City">Add City</MenuItem>
               </TextField>
+              <FormControl className="text-left">
+                <InputDialog
+                  onChange={handleNewLocation}
+                  title="Add city"
+                  input="Add new city"
+                ></InputDialog>
+              </FormControl>
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>

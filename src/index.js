@@ -16,7 +16,7 @@ const defaultMaterialTheme = createMuiTheme({
       main: orange[500]
     },
     text: {
-      primary: orange[700],
+      primary: orange[500],
       secondary: orange[500],
       hint: orange[500],
       disabled: orange[500]

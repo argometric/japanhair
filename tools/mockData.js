@@ -75,8 +75,6 @@ const locations = [
   {
     id: 1,
     name: "Tokyo",
-    map: "",
-    slots: 5,
     imgUrl:
       "https://res.cloudinary.com/dle7j0k6n/image/upload/v1570048723/tokyo-small_sradwd.jpg"
   },
