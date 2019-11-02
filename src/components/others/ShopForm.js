@@ -7,6 +7,9 @@ import Button from "@material-ui/core/Button";
 import { TextField, FormGroup } from "@material-ui/core";
 import orange from "@material-ui/core/colors/orange";
 import { DropzoneArea } from "material-ui-dropzone";
+import { getLocations, saveLocation } from "../../api/locationApi";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -24,6 +27,13 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       backgroundColor: "#212121"
     }
+  },
+  overrides: {
+    MuiSelect: {
+      select: {
+        textAlign: "start"
+      }
+    }
   }
 }));
 
@@ -31,6 +41,7 @@ function ShopForm(props) {
   const classes = useStyles();
   const [state, setState] = useState({});
   const [image, setImage] = useState({});
+  const [locations, setLocations] = useState([]);
 
   const handleChange = target => {
     console.log("********");
@@ -43,6 +54,7 @@ function ShopForm(props) {
   };
 
   useEffect(() => {
+    getLocations().then(_locations => setLocations(_locations));
     setState(props.shop.service);
   }, [props.shop.service]);
 
@@ -69,13 +81,22 @@ function ShopForm(props) {
             <br />
             <FormControl className={classes.formControl}>
               <TextField
+                className="text-left"
                 label="City"
-                value={props.shop.city}
                 name="city"
+                select
+                value={props.shop.city}
                 onChange={props.onChange}
                 helperText={props.errors.city}
                 error={props.errors.city === "City is required"}
-              />
+              >
+                {locations.map(option => (
+                  <MenuItem key={option.name} value={option.name}>
+                    {option.name}
+                  </MenuItem>
+                ))}
+                <MenuItem value="Add City">Add City</MenuItem>
+              </TextField>
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ShopForm from "../others/ShopForm";
-import { saveShop } from "../../api/shopAPI";
-import { getShops } from "../../api/shopAPI";
+import { saveShop, getShops } from "../../api/shopAPI";
 
 function AddLocation(props) {
   let _id = 0;
@@ -31,6 +30,7 @@ function AddLocation(props) {
   const handleChange = ({ target }) => {
     const updatedShop = { ...shop, [target.name]: target.value };
     setShop(updatedShop);
+    console.log(shop);
   };
 
   const handleService = ({ target }) => {
