@@ -72,7 +72,7 @@ export default function InputDialog(props) {
           <DialogContent>
             <TextField
               name="name"
-              onChange={props.handleChange}
+              onChange={handleChange}
               autoFocus
               label={props.input}
               fullWidth
