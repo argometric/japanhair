@@ -105,22 +105,20 @@ function ShopForm(props) {
             <FormControl className={classes.formControl}>
               <SelectTime
                 label="Opening Times"
+                hour={8}
                 value={otime}
-                onChange={handleTimes}
+                onChange={props.onSpecific}
                 name="openingTimes"
               />
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>
-              <TextField
-                label="Closing times"
-                value={props.shop.closingTimes}
+              <SelectTime
+                label="Closing Times"
+                hour={17}
+                value={otime}
+                onChange={props.onSpecific}
                 name="closingTimes"
-                onChange={props.onChange}
-                helperText={props.errors.closingTimes}
-                error={
-                  props.errors.closingTimes === "Closing-times are required"
-                }
               />
             </FormControl>
             <br />
@@ -197,7 +195,7 @@ function ShopForm(props) {
                 label="Logo"
                 name="imgUrl"
                 value={props.shop.imgUrl}
-                onChange={props.onChange}
+                onChange={props.onSpecific}
                 helperText={props.errors.imgUrl}
                 error={props.errors.slots === "Amount of slots are required"}
               />

@@ -10,6 +10,7 @@ function CloudinaryImageUploader(props) {
       function(error, result) {
         if (result.event === "success") {
           setImage(result.info.url);
+          props.onChange("imgUrl", result.info.url);
         }
       }
     );
@@ -17,13 +18,7 @@ function CloudinaryImageUploader(props) {
 
   return (
     <>
-      <TextField
-        value={image}
-        name="imgUrl"
-        onChange={props.onChange}
-        label={props.label}
-        disabled
-      />
+      <TextField value={image} name="imgUrl" label={props.label} disabled />
       <Button
         fullWidth
         variant="contained"
@@ -31,7 +26,6 @@ function CloudinaryImageUploader(props) {
         onClick={uploadWidget}
         name="imgUrl"
         value={image}
-        onChange={e => props.onChange}
       >
         Upload Logo
       </Button>

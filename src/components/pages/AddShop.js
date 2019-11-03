@@ -17,8 +17,8 @@ function AddLocation(props) {
     name: "",
     city: "",
     slots: "",
-    openingTimes: "",
-    closingTimes: "",
+    openingTimes: "0800",
+    closingTimes: "1700",
     service: {
       "cutting (30 min)": false,
       "cutting and washing (45 min)": false,
@@ -30,6 +30,12 @@ function AddLocation(props) {
   const handleChange = ({ target }) => {
     const updatedShop = { ...shop, [target.name]: target.value };
     setShop(updatedShop);
+    console.log(shop);
+  };
+
+  const handleSpecific = (key, value) => {
+    const updateShop = { ...shop, [key]: value };
+    setShop(updateShop);
     console.log(shop);
   };
 
@@ -89,6 +95,7 @@ function AddLocation(props) {
           onChange={handleChange}
           onService={handleService}
           onSubmit={handleSubmit}
+          onSpecific={handleSpecific}
           id="orangeBtn"
         ></ShopForm>
       </div>
