@@ -41,10 +41,6 @@ function AddLocation(props) {
     }
   };
 
-  const handleImage = target => {
-    // console.log(target);
-  };
-
   function formIsValid() {
     const _errors = {};
 
@@ -93,7 +89,6 @@ function AddLocation(props) {
           onChange={handleChange}
           onService={handleService}
           onSubmit={handleSubmit}
-          onImage={handleImage}
           id="orangeBtn"
         ></ShopForm>
       </div>

@@ -55,6 +55,8 @@ export default function InputDialog(props) {
     (
       <div>
         <Button
+          color="primary"
+          fullWidth
           className="pl-0 pt-0"
           onClick={handleClickOpen}
           name={props.input}
@@ -70,7 +72,7 @@ export default function InputDialog(props) {
           <DialogContent>
             <TextField
               name="name"
-              onChange={handleChange}
+              onChange={props.handleChange}
               autoFocus
               label={props.input}
               fullWidth

@@ -6,10 +6,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { TextField, FormGroup } from "@material-ui/core";
 import orange from "@material-ui/core/colors/orange";
-import { DropzoneArea } from "material-ui-dropzone";
 import { getLocations } from "../../api/locationApi";
 import MenuItem from "@material-ui/core/MenuItem";
-import InputDialog from "../common/InputDialog";
+import AddLocationDialog from "./AddLocationDialog";
+import SelectTime from "../common/TimePickerClass";
+import ImageUpload from "../common/CloudinaryImageUploader";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -33,22 +34,19 @@ const useStyles = makeStyles(theme => ({
 function ShopForm(props) {
   const classes = useStyles();
   const [state, setState] = useState({});
-  const [image, setImage] = useState({});
   const [locations, setLocations] = useState([]);
-
-  const handleChange = target => {
-    console.log("********");
-    console.log(image);
-    console.log(target);
-    console.log("********");
-
-    // setImage(target);
-    // props.onImage(image);
-  };
+  const [otime, setOtime] = useState(props.shop.openingTimes);
 
   const handleNewLocation = () => {
-    console.log("test");
     getLocations().then(_locations => setLocations(_locations));
+  };
+
+  const handleTimes = target => {
+    console.log(target._d);
+    setOtime(target);
+    console.log("--------");
+    console.log(otime);
+    props.onChange(otime);
   };
 
   useEffect(() => {
@@ -63,6 +61,7 @@ function ShopForm(props) {
       <div className="title text-center">
         <h1>Add shop</h1>
       </div>
+
       <form onSubmit={props.onSubmit}>
         <div className="row text-center">
           <div className="col">
@@ -95,24 +94,20 @@ function ShopForm(props) {
                 ))}
               </TextField>
               <FormControl className="text-left">
-                <InputDialog
+                <AddLocationDialog
                   onChange={handleNewLocation}
                   title="Add city"
                   input="Add new city"
-                ></InputDialog>
+                ></AddLocationDialog>
               </FormControl>
             </FormControl>
-            <br />
+            <br /> <br />
             <FormControl className={classes.formControl}>
-              <TextField
-                label="Opening times"
-                value={props.shop.openingTimes}
+              <SelectTime
+                label="Opening Times"
+                value={otime}
+                onChange={handleTimes}
                 name="openingTimes"
-                onChange={props.onChange}
-                helperText={props.errors.openingTimes}
-                error={
-                  props.errors.openingTimes === "Opening-times are required"
-                }
               />
             </FormControl>
             <br />
@@ -139,7 +134,6 @@ function ShopForm(props) {
                 error={props.errors.slots === "Amount of slots are required"}
               />
             </FormControl>
-
             <br />
             <FormControl className={classes.formControl}>
               <TextField
@@ -190,24 +184,22 @@ function ShopForm(props) {
               </FormGroup>
             </FormControl>
             <br />
-            <FormControl className={`${classes.formControl} `}>
-              <TextField
-                label="Logo"
+            <FormControl className={classes.formControl}>
+              {/* <TextField
                 value={props.shop.imgUrl}
                 name="imgUrl"
                 onChange={props.onChange}
+                disabled
+                label="Logo"
+              /> */}
+
+              <ImageUpload
+                label="Logo"
+                name="imgUrl"
+                value={props.shop.imgUrl}
+                onChange={props.onChange}
                 helperText={props.errors.imgUrl}
-                error={props.errors.imgUrl === "Logo is required"}
-                className="mb-1"
-              />
-              <DropzoneArea
-                onChange={handleChange}
-                acceptedFiles={["image/jpeg", "image/png", "image/bmp"]}
-                filesLimit={1}
-                showAlerts={true}
-                showPreviews={true}
-                maxFileSize={5000000}
-                showFileNamesInPreview={false}
+                error={props.errors.slots === "Amount of slots are required"}
               />
             </FormControl>
             <br />
