@@ -29,7 +29,7 @@ function TimePickerClass(props) {
           todayLabel="Current Time"
           label={props.label}
           value={selectedDate}
-          minutesStep={5}
+          minutesStep={15}
           onChange={date => onChange(date)}
           name={props.name}
         />

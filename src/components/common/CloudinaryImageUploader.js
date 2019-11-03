@@ -9,7 +9,7 @@ function CloudinaryImageUploader(props) {
       { cloud_name: "dle7j0k6n", upload_preset: "q5xggjvy", tags: ["xmas"] },
       function(error, result) {
         if (result.event === "success") {
-          setImage(result.info.url);
+          setImage("Logo uploaded");
           props.onChange("imgUrl", result.info.url);
         }
       }
@@ -18,7 +18,14 @@ function CloudinaryImageUploader(props) {
 
   return (
     <>
-      <TextField value={image} name="imgUrl" label={props.label} disabled />
+      <TextField
+        disabled
+        value={image}
+        name="imgUrl"
+        label={props.label}
+        helperText={props.helperText}
+        error={props.error}
+      />
       <Button
         fullWidth
         variant="contained"

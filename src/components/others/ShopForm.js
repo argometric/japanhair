@@ -41,12 +41,9 @@ function ShopForm(props) {
     getLocations().then(_locations => setLocations(_locations));
   };
 
-  const handleTimes = target => {
-    console.log(target._d);
-    setOtime(target);
-    console.log("--------");
-    console.log(otime);
-    props.onChange(otime);
+  const handleSlots = ({ target }) => {
+    props.onNumber("slots", target.value);
+    console.log(target);
   };
 
   useEffect(() => {
@@ -107,7 +104,7 @@ function ShopForm(props) {
                 label="Opening Times"
                 hour={8}
                 value={otime}
-                onChange={props.onSpecific}
+                onChange={props.onNumber}
                 name="openingTimes"
               />
             </FormControl>
@@ -117,7 +114,7 @@ function ShopForm(props) {
                 label="Closing Times"
                 hour={17}
                 value={otime}
-                onChange={props.onSpecific}
+                onChange={props.onNumber}
                 name="closingTimes"
               />
             </FormControl>
@@ -126,8 +123,15 @@ function ShopForm(props) {
               <TextField
                 label="Slots"
                 value={props.shop.slots}
+                type="text"
+                inputProps={{
+                  maxLength: 2
+                }}
+                onInput={e => {
+                  e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                }}
                 name="slots"
-                onChange={props.onChange}
+                onChange={handleSlots.bind(this)}
                 helperText={props.errors.slots}
                 error={props.errors.slots === "Amount of slots are required"}
               />

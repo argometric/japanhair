@@ -30,13 +30,16 @@ function AddLocation(props) {
   const handleChange = ({ target }) => {
     const updatedShop = { ...shop, [target.name]: target.value };
     setShop(updatedShop);
-    console.log(shop);
   };
 
   const handleSpecific = (key, value) => {
     const updateShop = { ...shop, [key]: value };
     setShop(updateShop);
-    console.log(shop);
+  };
+
+  const handleNumber = (key, value) => {
+    const updatedShop = { ...shop, [key]: Number(value) };
+    setShop(updatedShop);
   };
 
   const handleService = ({ target }) => {
@@ -96,6 +99,7 @@ function AddLocation(props) {
           onService={handleService}
           onSubmit={handleSubmit}
           onSpecific={handleSpecific}
+          onNumber={handleNumber}
           id="orangeBtn"
         ></ShopForm>
       </div>

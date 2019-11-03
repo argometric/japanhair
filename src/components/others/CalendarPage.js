@@ -20,8 +20,10 @@ const useStyles = makeStyles(theme => ({
 const CalendarPage = props => {
   const [shops, setShops] = useState([]);
   let slots;
-  let openingTimes;
-  let closingTimes;
+  let openingHours;
+  let openingMinutes;
+  let closingHours;
+  let closingMinutes;
   let service;
 
   useEffect(() => {
@@ -29,23 +31,57 @@ const CalendarPage = props => {
   }, []);
   shops.forEach(s => {
     if (props.props === s.name) {
-      openingTimes = s.openingTimes / 100;
-      closingTimes = s.closingTimes / 100;
+      openingHours = Math.trunc(s.openingTimes / 100);
+      openingMinutes = Number((s.openingTimes - openingHours * 100).toFixed(2));
+      closingHours = Math.trunc(s.closingTimes / 100);
+      closingMinutes = Number((s.closingTimes - closingHours * 100).toFixed(2));
       slots = s.slots;
       service = s.service;
     }
   });
-
-  const amountOfHours = closingTimes - openingTimes;
+  console.log(closingMinutes);
+  let amountOfHours = closingHours - openingHours;
 
   const createData = (hour, slots) => {
     return { hour, slots };
   };
 
   const rows = [];
-  for (let i = 0; i < amountOfHours; i++) {
-    rows.push(createData((openingTimes + i).toString() + ":00", slots));
-    rows.push(createData((openingTimes + i).toString() + ":30", slots));
+  if (openingMinutes === 0) {
+    rows.push(createData(openingHours.toString() + ":00", slots));
+    rows.push(createData(openingHours.toString() + ":15", slots));
+    rows.push(createData(openingHours.toString() + ":30", slots));
+    rows.push(createData(openingHours.toString() + ":45", slots));
+  }
+  if (openingMinutes === 15) {
+    rows.push(createData(openingHours.toString() + ":15", slots));
+    rows.push(createData(openingHours.toString() + ":30", slots));
+    rows.push(createData(openingHours.toString() + ":45", slots));
+  }
+  if (openingMinutes === 30) {
+    rows.push(createData(openingHours.toString() + ":30", slots));
+    rows.push(createData(openingHours.toString() + ":45", slots));
+  }
+  if (openingMinutes === 45) {
+    rows.push(createData(openingHours.toString() + ":45", slots));
+  }
+  for (let i = 1; i < amountOfHours; i++) {
+    rows.push(createData((openingHours + i).toString() + ":00", slots));
+    rows.push(createData((openingHours + i).toString() + ":15", slots));
+    rows.push(createData((openingHours + i).toString() + ":30", slots));
+    rows.push(createData((openingHours + i).toString() + ":45", slots));
+  }
+  if (closingMinutes === 15) {
+    rows.push(createData(closingHours.toString() + ":00", slots));
+  }
+  if (closingMinutes === 30) {
+    rows.push(createData(closingHours.toString() + ":00", slots));
+    rows.push(createData(closingHours.toString() + ":15", slots));
+  }
+  if (closingMinutes === 45) {
+    rows.push(createData(closingHours.toString() + ":00", slots));
+    rows.push(createData(closingHours.toString() + ":15", slots));
+    rows.push(createData(closingHours.toString() + ":30", slots));
   }
 
   const classes = useStyles();
