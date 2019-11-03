@@ -24,6 +24,7 @@ function TimePickerClass(props) {
     <>
       <MuiPickersUtilsProvider utils={MomentUtils}>
         <TimePicker
+          inputVariant="outlined"
           ampm={false}
           showTodayButton
           todayLabel="Current Time"

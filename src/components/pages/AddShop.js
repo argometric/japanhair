@@ -24,7 +24,8 @@ function AddLocation(props) {
       "cutting and washing (45 min)": false,
       "hair dyeing (60min)": false
     },
-    imgUrl: ""
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1572808205/xd0f9dhcl4itveew9ngv.jpg"
   });
 
   const handleChange = ({ target }) => {

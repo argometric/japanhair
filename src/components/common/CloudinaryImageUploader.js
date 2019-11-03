@@ -6,7 +6,7 @@ function CloudinaryImageUploader(props) {
   const [image, setImage] = useState("");
   const uploadWidget = () => {
     window.cloudinary.openUploadWidget(
-      { cloud_name: "dle7j0k6n", upload_preset: "q5xggjvy", tags: ["xmas"] },
+      { cloud_name: "dle7j0k6n", upload_preset: "q5xggjvy" },
       function(error, result) {
         if (result.event === "success") {
           setImage("Logo uploaded");
@@ -20,6 +20,7 @@ function CloudinaryImageUploader(props) {
     <>
       <TextField
         disabled
+        variant="filled"
         value={image}
         name="imgUrl"
         label={props.label}

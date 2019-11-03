@@ -11,11 +11,19 @@ import MenuItem from "@material-ui/core/MenuItem";
 import AddLocationDialog from "./AddLocationDialog";
 import SelectTime from "../common/TimePickerClass";
 import ImageUpload from "../common/CloudinaryImageUploader";
+import { fade } from "@material-ui/core/styles/colorManipulator";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
     width: 300,
-    color: orange[500]
+    color: orange[500],
+    margin: theme.spacing(1)
+  },
+  checkbox: {
+    "&:hover": {
+      backgroundColor: fade(orange[500], 0.1),
+      borderRadius: "4px"
+    }
   },
   dropzone: {
     height: 200,
@@ -64,6 +72,7 @@ function ShopForm(props) {
           <div className="col">
             <FormControl className={classes.formControl}>
               <TextField
+                variant="outlined"
                 label="Name"
                 value={props.shop.name}
                 name="name"
@@ -75,6 +84,7 @@ function ShopForm(props) {
             <br />
             <FormControl className={classes.formControl}>
               <TextField
+                variant="outlined"
                 className="text-left"
                 label="City"
                 name="city"
@@ -98,7 +108,7 @@ function ShopForm(props) {
                 ></AddLocationDialog>
               </FormControl>
             </FormControl>
-            <br /> <br />
+            <br />
             <FormControl className={classes.formControl}>
               <SelectTime
                 label="Opening Times"
@@ -121,6 +131,7 @@ function ShopForm(props) {
             <br />
             <FormControl className={classes.formControl}>
               <TextField
+                variant="outlined"
                 label="Slots"
                 value={props.shop.slots}
                 type="text"
@@ -139,6 +150,7 @@ function ShopForm(props) {
             <br />
             <FormControl className={classes.formControl}>
               <TextField
+                variant="filled"
                 label="Services"
                 disabled
                 name="slots"
@@ -151,7 +163,7 @@ function ShopForm(props) {
               />
               <FormGroup className="ml-3">
                 <FormControlLabel
-                  className="mb-0"
+                  className={classes.checkbox}
                   control={
                     <Checkbox
                       checked={a}
@@ -162,7 +174,7 @@ function ShopForm(props) {
                   label="cutting (30 min)"
                 />
                 <FormControlLabel
-                  className="mb-0"
+                  className={classes.checkbox}
                   control={
                     <Checkbox
                       checked={b}
@@ -173,7 +185,7 @@ function ShopForm(props) {
                   label="cutting and washing (45 min)"
                 />
                 <FormControlLabel
-                  className="mb-0"
+                  className={classes.checkbox}
                   control={
                     <Checkbox
                       checked={c}
@@ -187,14 +199,6 @@ function ShopForm(props) {
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>
-              {/* <TextField
-                value={props.shop.imgUrl}
-                name="imgUrl"
-                onChange={props.onChange}
-                disabled
-                label="Logo"
-              /> */}
-
               <ImageUpload
                 label="Logo"
                 name="imgUrl"
@@ -212,8 +216,6 @@ function ShopForm(props) {
               value="Save"
               id="orangeBtn"
               className={classes.button}
-              // component={Link}
-              // to="/book"
             >
               Save
             </Button>

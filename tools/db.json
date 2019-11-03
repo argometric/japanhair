@@ -90,8 +90,8 @@
     {
       "id": 4,
       "name": "Test",
-      "imgUrl": "",
-      "createdAt": 1572787763252
+      "imgUrl": "https://res.cloudinary.com/dle7j0k6n/image/upload/v1572808205/xd0f9dhcl4itveew9ngv.jpg",
+      "createdAt": 1572808303437
     }
   ],
   "shops": [
@@ -187,108 +187,33 @@
     },
     {
       "id": 7,
-      "name": "Testshop1",
-      "city": "Osaka",
-      "slots": "77",
-      "openingTimes": "0945",
-      "closingTimes": "2030",
-      "service": {
-        "cutting (30 min)": false,
-        "cutting and washing (45 min)": true,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572791224/umoddovcmvcx58yrs9fd.jpg",
-      "createdAt": 1572791225987
-    },
-    {
-      "id": 8,
-      "name": "Yolo",
-      "city": "Kyoto",
-      "slots": "22",
-      "openingTimes": "0930",
-      "closingTimes": "1500",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572791394/r4lsq9miuhesg2uuhe5z.jpg",
-      "createdAt": 1572791396841
-    },
-    {
-      "id": 9,
-      "name": "Argometric",
-      "city": "Kyoto",
-      "slots": "12",
-      "openingTimes": "0900",
-      "closingTimes": "1700",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572791743/uw0proh2czxcolon8oti.jpg",
-      "createdAt": 1572791746671
-    },
-    {
-      "id": 10,
-      "name": "Wooot",
-      "city": "Tokyo",
-      "slots": 12,
-      "openingTimes": "1200",
-      "closingTimes": "1800",
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572792004/mpeqfukpwrw3pnaxlber.jpg",
-      "createdAt": 1572792005527
-    },
-    {
-      "id": 11,
-      "name": "Yolooooo",
-      "city": "Tokyo",
-      "slots": 12,
-      "openingTimes": 1000,
-      "closingTimes": 1230,
-      "service": {
-        "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
-      },
-      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572793826/tp0ideq9ekcvqqpxmdc3.jpg",
-      "createdAt": 1572793826872
-    },
-    {
-      "id": 12,
-      "name": "Tesssssst",
-      "city": "Kyoto",
-      "slots": 22,
-      "openingTimes": 815,
+      "name": "Test shop",
+      "city": "Test",
+      "slots": 2,
+      "openingTimes": 1115,
       "closingTimes": 1830,
       "service": {
         "cutting (30 min)": true,
-        "cutting and washing (45 min)": false,
+        "cutting and washing (45 min)": true,
         "hair dyeing (60min)": false
       },
-      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572793861/ylvtog0qgj7pbhp49sh8.jpg",
-      "createdAt": 1572793862209
+      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572808358/zjc4yfgiiqvw03g2fcwx.jpg",
+      "createdAt": 1572808362561
     },
     {
-      "id": 13,
-      "name": "asdaa",
-      "city": "Kyoto",
-      "slots": 12,
-      "openingTimes": 900,
+      "id": 8,
+      "name": "Testshop 2",
+      "city": "Test",
+      "slots": 7,
+      "openingTimes": "0800",
       "closingTimes": "1700",
       "service": {
-        "cutting (30 min)": true,
+        "cutting (30 min)": false,
         "cutting and washing (45 min)": false,
-        "hair dyeing (60min)": false
+        "hair dyeing (60min)": true
       },
-      "imgUrl": "http://res.cloudinary.com/dle7j0k6n/image/upload/v1572794390/tgzc7hn5ju1kiudkun9n.jpg",
-      "createdAt": 1572794391752
+      "imgUrl": "https://res.cloudinary.com/dle7j0k6n/image/upload/v1572808205/xd0f9dhcl4itveew9ngv.jpg",
+      "createdAt": 1572808376364
     }
   ]
 }

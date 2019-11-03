@@ -6,6 +6,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { getLocations, saveLocation } from "../../api/locationApi";
+import ImageUpload from "../common/CloudinaryImageUploader";
 
 export default function InputDialog(props) {
   let _id = 0;
@@ -13,7 +14,8 @@ export default function InputDialog(props) {
   const [location, setLocation] = useState({
     id: _id,
     name: "",
-    imgUrl: ""
+    imgUrl:
+      "https://res.cloudinary.com/dle7j0k6n/image/upload/v1572808205/xd0f9dhcl4itveew9ngv.jpg"
   });
   const [locations, setLocations] = useState([]);
 
@@ -31,6 +33,11 @@ export default function InputDialog(props) {
 
   const handleChange = ({ target }) => {
     const updatedLocation = { ...location, [target.name]: target.value };
+    setLocation(updatedLocation);
+  };
+
+  const handleImage = (key, value) => {
+    const updatedLocation = { ...location, [key]: value };
     setLocation(updatedLocation);
   };
 
@@ -53,11 +60,10 @@ export default function InputDialog(props) {
   return (
     getId(),
     (
-      <div>
+      <>
         <Button
-          color="primary"
+          variant="outlined"
           fullWidth
-          className="pl-0 pt-0"
           onClick={handleClickOpen}
           name={props.input}
         >
@@ -78,6 +84,12 @@ export default function InputDialog(props) {
               fullWidth
             />
           </DialogContent>
+          <ImageUpload
+            label="Logo"
+            name="imgUrl"
+            value={location.imgUrl}
+            onChange={handleImage}
+          ></ImageUpload>
           <DialogActions>
             <Button onClick={handleSave} color="primary">
               Save
@@ -87,7 +99,7 @@ export default function InputDialog(props) {
             </Button>
           </DialogActions>
         </Dialog>
-      </div>
+      </>
     )
   );
 }
