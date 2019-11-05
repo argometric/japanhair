@@ -45,7 +45,9 @@ export default function InputDialog(props) {
     event.preventDefault();
     saveLocation(location).then(() => {
       props.onChange();
+      getLocations().then(_locations => setLocations(_locations));
     });
+
     setOpen(false);
   };
 

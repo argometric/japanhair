@@ -46,7 +46,7 @@ export default function LocationsList(props) {
       <Grid container spacing={5} direction="row" justify="space-evenly">
         {props.locations.map(locations => {
           return (
-            <Grid key={locations.id} item md>
+            <Grid key={locations.id} item xs={3}>
               <Card className="card mb-4 shadow-sm">
                 <CardActionArea
                   onClick={() => {
