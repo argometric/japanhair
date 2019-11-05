@@ -27,21 +27,21 @@ const TestPage = props => {
   let page = "";
 
   if (shop !== undefined) {
-    title = props.location.shopname;
+    title = shop;
     page = (
       <>
         <CalendarPage props={shop}></CalendarPage>
-        <br />
-        <Button variant="outlined" onClick={reset}>
-          Change Location
-        </Button>
       </>
     );
-  } else {
-    page = (
-      <>
+  }
+
+  return (
+    <div className="container">
+      <div className="title text-center">
+        <h1>{title}</h1>
+        {page}
         <FormControl>
-          <InputLabel htmlFor="age-simple">Select a shop</InputLabel>
+          <InputLabel >Select a shop</InputLabel>
           <Select onChange={handleChange} value="" style={{ width: "200px" }}>
             {shops.map(s => (
               <MenuItem key={s.name} value={s.name}>
@@ -50,14 +50,6 @@ const TestPage = props => {
             ))}
           </Select>
         </FormControl>
-      </>
-    );
-  }
-  return (
-    <div className="container">
-      <div className="title text-center">
-        <h1>{title}</h1>
-        {page}
       </div>
     </div>
   );

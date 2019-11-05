@@ -39,7 +39,6 @@ const CalendarPage = props => {
       service = s.service;
     }
   });
-  console.log(closingMinutes);
   let amountOfHours = closingHours - openingHours;
 
   const createData = (hour, slots) => {
