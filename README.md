@@ -37,6 +37,34 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Running under Linux
+
+If you encounter any errors when trying to run the application locally via WSL or directly on a linux distribution, especially if you have problems starting the applicaiton due to corrupted line <br> endings (CRLF | LF ) or if the error appears to reside within the node_module script(s) themself(es), then run the following commands which will likely resolve your issue
+
+### `sudo npm cache clean -f`
+
+Execute a forcefull cashe purge of the current npm installation
+
+### `sudo npm install -g n`
+
+Install the specified npm module as superuser. The ' -g'  flag will install the module globally. The default installation location for the module 'n' is `/usr/local `
+
+### `sudo n stable`
+
+Fetches information about the currently installed version of node, as well as some additional information. 
+
+### `sudo rm -rf node_modules` 
+
+Will remove the corrupted node-module directory from the file system
+
+### `sudo npm cache clean --force` 
+
+This will clean (read: pruge) the npm cache
+
+### `sudo npm install` 
+
+Lastly, this command will (re-) install npm
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
