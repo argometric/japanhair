@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ShopForm from "../others/ShopForm";
-import { saveShop, getShops } from "../../api/shopAPI";
+import shopStore from "../../stores/shopStore";
+import * as shopActions from "../../actions/shopActions"
+import { loadShops } from "../../actions/shopActions";
 
 function AddLocation(props) {
   let _id = 0;
@@ -9,8 +11,14 @@ function AddLocation(props) {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    getShops().then(_shops => setShops(_shops));
+    shopStore.addChangeListerner(onChange);
+    if (shopStore.getShops().length === 0) loadShops();
+    return () => shopStore.removeChangeListener(onChange);
   }, []);
+
+  function onChange() {
+    setShops(shopStore.getShops());
+  }
 
   const [shop, setShop] = useState({
     id: _id,
@@ -75,7 +83,7 @@ function AddLocation(props) {
   const handleSubmit = event => {
     event.preventDefault();
     if (!formIsValid()) return;
-    saveShop(shop).then(() => {
+    shopActions.saveShop(shop).then(() => {
       props.history.push("/book");
     });
   };

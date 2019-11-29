@@ -6,12 +6,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { TextField, FormGroup } from "@material-ui/core";
 import orange from "@material-ui/core/colors/orange";
-import { getLocations } from "../../api/locationApi";
 import MenuItem from "@material-ui/core/MenuItem";
 import AddLocationDialog from "./AddLocationDialog";
 import SelectTime from "../common/TimePickerClass";
 import ImageUpload from "../common/CloudinaryImageUploader";
 import { fade } from "@material-ui/core/styles/colorManipulator";
+import locationStore from "../../stores/locationStore";
+import { loadLocations } from "../../actions/locationActions";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -46,7 +47,7 @@ function ShopForm(props) {
   const [otime, setOtime] = useState(props.shop.openingTimes);
 
   const handleNewLocation = () => {
-    getLocations().then(_locations => setLocations(_locations));
+    setLocations(loadLocations());
   };
 
   const handleSlots = ({ target }) => {
@@ -55,7 +56,17 @@ function ShopForm(props) {
   };
 
   useEffect(() => {
-    getLocations().then(_locations => setLocations(_locations));
+    locationStore.addChangeListerner(onChange);
+    if (locationStore.getLocations().length === 0) loadLocations();
+    return () => locationStore.removeChangeListener(onChange);
+  }, []);
+
+  function onChange() {
+    setLocations(locationStore.getLocations());
+  }
+
+  useEffect(() => {
+    setLocations(locationStore.getLocations());
     setState(props.shop.service);
   }, [props.shop.service]);
 

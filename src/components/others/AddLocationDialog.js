@@ -5,8 +5,9 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import { getLocations, saveLocation } from "../../api/locationApi";
 import ImageUpload from "../common/CloudinaryImageUploader";
+import locationStore from "../../stores/locationStore";
+import { loadLocations, saveLocation } from "../../actions/locationActions";
 
 export default function InputDialog(props) {
   let _id = 0;
@@ -20,8 +21,14 @@ export default function InputDialog(props) {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
-    getLocations().then(_locations => setLocations(_locations));
+    locationStore.addChangeListerner(onChange);
+    if (locationStore.getLocations().length === 0) loadLocations();
+    return () => locationStore.removeChangeListener(onChange);
   }, []);
+
+  function onChange() {
+    setLocation(locationStore.getLocations());
+  }
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -45,7 +52,7 @@ export default function InputDialog(props) {
     event.preventDefault();
     saveLocation(location).then(() => {
       props.onChange();
-      getLocations().then(_locations => setLocations(_locations));
+      setLocations(locationStore.getLocations());
     });
 
     setOpen(false);

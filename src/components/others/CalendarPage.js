@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { getShops } from "../../api/shopAPI";
+import shopStore from "../../stores/shopStore";
 import TableSlot from "./Tableslot";
+import { loadShops } from "../../actions/shopActions";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,8 +28,14 @@ const CalendarPage = props => {
   let service;
 
   useEffect(() => {
-    getShops().then(_shops => setShops(_shops));
+    shopStore.addChangeListerner(onChange);
+    if (shopStore.getShops().length === 0) loadShops();
   }, []);
+
+  function onChange() {
+    setShops(shopStore.getShops());
+  }
+
   shops.forEach(s => {
     if (props.props === s.name) {
       openingHours = Math.trunc(s.openingTimes / 100);
