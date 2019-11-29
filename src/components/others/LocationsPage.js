@@ -23,8 +23,6 @@ function LocationsPage() {
         setShops(shopStore.getShops());
       }
 
-
-
     return (
         <div className='album py-2 container'>
             <div className='row'>

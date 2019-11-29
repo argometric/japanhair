@@ -30,6 +30,7 @@ const CalendarPage = props => {
   useEffect(() => {
     shopStore.addChangeListerner(onChange);
     if (shopStore.getShops().length === 0) loadShops();
+    return () => shopStore.removeChangeListener(onChange);
   }, []);
 
   function onChange() {
